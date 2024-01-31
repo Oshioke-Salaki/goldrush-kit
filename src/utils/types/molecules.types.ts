@@ -4,6 +4,7 @@ import {
     type UniswapLikeEcosystemCharts,
     type TokenV2VolumeWithChartData,
     type ExchangeTransaction,
+    type Transaction,
 } from "@covalenthq/client-sdk";
 
 export interface AccountCardProps {
@@ -27,6 +28,15 @@ export interface NFTSalesCountProps {
     chain_name: Chain;
     collection_address: string;
     token_id?: string;
+}
+
+export interface TransactionListProps {
+    chain_names: Chain[];
+    address: string;
+}
+
+export interface CrossChainTransaction extends Transaction {
+    chain: Chain;
 }
 
 export interface XYKPoolTimeSeriesProps {
