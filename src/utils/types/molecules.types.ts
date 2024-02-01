@@ -4,6 +4,7 @@ import {
     type UniswapLikeEcosystemCharts,
     type TokenV2VolumeWithChartData,
     type ExchangeTransaction,
+    type TransactionsSummary,
 } from "@covalenthq/client-sdk";
 
 export interface AccountCardProps {
@@ -15,6 +16,15 @@ export interface AccountCardProps {
 export interface AccountOverviewProps {
     address: string;
     chain_names: Chain[];
+}
+
+export interface AccountInfoProps {
+    address: string;
+    chain_names: Chain[];
+}
+
+export interface CrossChainTransactionsSummary extends TransactionsSummary {
+    chain_name: Chain;
 }
 
 export interface CollectionCardProps {
